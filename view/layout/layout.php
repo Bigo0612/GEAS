@@ -24,15 +24,15 @@
     </div>
 
     <footer>
-        <div class="footer-icons">
-            <h6>Retrouvez-nous sur </h6>
-            <a href="#"><i class="fab fa-facebook-square"></i></a>
-            <a href="#"><i class="fab fa-twitter-square"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-youtube-square"></i></a>
-        </div>
+
 
         <div class="foot">
+            <div class="footer-icons">
+                <a href="#"><i class="fab fa-facebook-square"></i></a>
+                <a href="#"><i class="fab fa-twitter-square"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-youtube-square"></i></a>
+            </div>
             <p>&copy; 2020 - minigarde &reg;</p>
             <a href="<?= $view->path('mentionsLegales'); ?>">Mentions légales</a>
             <a href="<?= $view->path('cgu'); ?>">Conditions d'utilisation</a>
