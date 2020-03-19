@@ -1,0 +1,27 @@
+#homePage h2 {
+    font-size: 36px;
+    text-align: center;
+    padding: 40px 0;
+}
+
+#homePage h2 span {
+    color: #22D66E;
+}
+
+#homePage .info {
+    background-color: #024766;
+}
+
+#homePage .info h3 {
+    font-size: 30px;
+    padding: 40px 0;
+    color: #fff;
+}
+
+#homePage .info h3 span {
+    color: #22D66E;
+}
+
+#homePage .gouv a {
+    display: inline-block;
+} 
