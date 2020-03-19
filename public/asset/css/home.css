@@ -1,5 +1,5 @@
 #homePage h2 {
-    font-size: 36px;
+    font-size: 3vw;
     text-align: center;
     padding: 40px 0;
 }
@@ -9,19 +9,33 @@
 }
 
 #homePage .info {
-    background-color: #024766;
+    background-color: #024766;    
 }
 
 #homePage .info h3 {
-    font-size: 30px;
+    font-size: 2.4vw;
     padding: 40px 0;
     color: #fff;
+    padding-left: 5%;
+    display: inline-block;
+    width: 40%;
 }
 
 #homePage .info h3 span {
-    color: #22D66E;
+    color: #22D66E;  
 }
 
-#homePage .gouv a {
-    display: inline-block;
+#homePage .info .gouv {
+    background-color: #22D66E;
+    float: right;
+    width: 20%;
+    height: 40px;
+    text-align: center;
+    border-radius: 50px;  
+    margin: 60px 20%;
+}
+
+#homePage .info .gouv a {
+    color: #fff;
+    font-size: 2vw;
 } 
