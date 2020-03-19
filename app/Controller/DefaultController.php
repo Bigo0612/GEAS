@@ -11,11 +11,7 @@ class DefaultController extends Controller
 
     public function index()
     {
-        $message = 'Bienvenue sur le framework MVC';
-
-        $this->render('app.default.frontpage',array(
-            'message' => $message,
-        ));
+        $this->render('app.default.frontpage',array());
     }
 
     /**
