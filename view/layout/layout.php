@@ -24,14 +24,24 @@
     </div>
 
     <footer>
+        <div class="footer-icons">
+            <h6>Retrouvez-nous sur </h6>
+            <a href="#"><i class="fab fa-facebook-square"></i></a>
+            <a href="#"><i class="fab fa-twitter-square"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-youtube-square"></i></a>
+        </div>
+
         <div class="foot">
             <p>&copy; 2020 - minigarde &reg;</p>
-            <a href="<?= $view->path('mentionsLegales'); ?>">Mentions légales</a> |
-            <a href="<?= $view->path('cgu'); ?>">Conditions d'utilisation</a> |
+            <a href="<?= $view->path('mentionsLegales'); ?>">Mentions légales</a>
+            <a href="<?= $view->path('cgu'); ?>">Conditions d'utilisation</a>
             <a href="contact.php">Contact</a>
         </div>
     </footer>
 
     <script src="<?= $view->asset('js/main.js'); ?>"></script>
+    <script src="https://kit.fontawesome.com/5d1ae1daad.js" crossorigin="anonymous"></script>
+
   </body>
 </html>
