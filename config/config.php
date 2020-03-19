@@ -6,5 +6,5 @@ return array(
     'db_pass'   => '',
     'db_host'   => 'localhost',
 
-    'directory' => '/GEAS/view/'
+    'directory' => '/GEAS/'
 );

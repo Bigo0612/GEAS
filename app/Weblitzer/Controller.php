@@ -2,6 +2,8 @@
 
 namespace App\Weblitzer;
 
+use App\Weblitzer\Config;
+use App\Weblitzer\View;
 
 /**
  *
@@ -12,14 +14,13 @@ class Controller
 
     private $layout = 'layout';
 
-    protected function render($viewer,$variable = []){
-        $view = new View();
+    protected function render($view,$variable = []){
         ob_start();
         extract($variable);
-        require $this->getViewPath().str_replace('.','/',$viewer).'.php';
+        require $this->getViewPath().str_replace('.','/',$view).'.php';
+        $view = new View();
         $content = ob_get_clean();
         require $this->getViewPath().'layout/'.$this->layout.'.php';
-        die();
     }
 
     private function getViewPath()
