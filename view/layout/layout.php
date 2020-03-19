@@ -25,6 +25,13 @@
     </div>
 
     <footer>
+        <div class="foot">
+            <p>&copy; 2020 - minigarde &reg;</p>
+            <a href="index.php">Accueil</a>
+            <a href="contact.php">Contact</a>
+            <a href="<?= $view->path('cgu'); ?>">CGU</a>
+            <a href="<?= $view->path('mentionsLegales'); ?>">Mentions légales</a>
+        </div>
 
     </footer>
 
