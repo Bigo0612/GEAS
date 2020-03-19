@@ -12,10 +12,9 @@
     <header>
       <nav>
           <ul>
-              <li><a href="<?= $view->path('home'); ?>">Hoome</a></li>
-              <li><a href="<?= $view->path('contact'); ?>">Contact</a></li>
-              <li><a href="<?= $view->path('single',array(12)); ?>">Single</a></li>
-              <li><a href="<?= $view->path('single2',array(12,'dedede')); ?>">Single2</a></li>
+              <li><a href="<?= $view->path('home'); ?>">Home</a></li>
+              <li><a href="<?= $view->path('inscription'); ?>">Inscription</a></li>
+              <li><a href="<?= $view->path('connexion'); ?>">Connexion</a></li>
           </ul>
       </nav>
     </header>
