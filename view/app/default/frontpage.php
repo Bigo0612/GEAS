@@ -10,8 +10,8 @@
 <div class="info">
     <div class="flex1">
         <h3>Besoin d'information pour <br><span>devenir un mini garde ?</span></h3>
-        <div class="gouv"><a href="#">info-gouv</a></div>
     </div>
+    <div class="gouv"><a href="#">info-gouv</a></div>
 </div>
 
 <div class="gardien">

@@ -9,8 +9,14 @@
 }
 
 #homePage .info {
-    background-color: #024766;    
+    background-color: #024766;
+    display: flex;
 }
+
+#homePage .flex1 {
+    width: 60%;
+}
+
 
 #homePage .info h3 {
     font-size: 2.4vw;
@@ -18,7 +24,6 @@
     color: #fff;
     padding-left: 5%;
     display: inline-block;
-    width: 40%;
 }
 
 #homePage .info h3 span {
@@ -27,7 +32,6 @@
 
 #homePage .info .gouv {
     background-color: #22D66E;
-    float: right;
     width: 20%;
     height: 40px;
     text-align: center;
