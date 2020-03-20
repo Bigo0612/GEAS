@@ -14,7 +14,7 @@
       <nav>
           <ul>
               <li><a href="<?= $view->path('home'); ?>">Home</a></li>
-              <li><a href="<?= $view->path('inscription'); ?>">Inscription</a></li>
+              <li><a href="<?= $view->path('register'); ?>">Inscription</a></li>
               <li><a href="<?= $view->path('connexion'); ?>">Connexion</a></li>
           </ul>
       </nav>
