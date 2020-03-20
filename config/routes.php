@@ -8,6 +8,10 @@ if($page == 'home') {
   $controller = new App\Controller\DefaultController();
   $controller->index();
 }
+elseif ($page == 'register') {
+    $controller = new App\Controller\UserController();
+    $controller->register();
+}
 
 else {
   $controller = new App\Controller\DefaultController();

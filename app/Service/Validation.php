@@ -60,5 +60,16 @@ class Validation
 
     }
 
+    public function generateErrorRepeat($value, $value2, $text){
+        if($value != $value2){
+            return '<p style="color: red">'.$text.'</p>';
+        }
+    }
+
+    public function generateErrorCheckBox($value, $text){
+        if(!$value){
+            return $text;
+        }
+    }
 
 }
