@@ -1,5 +1,5 @@
 #homePage h2 {
-    font-size: 3vw;
+    font-size: 3em;
     text-align: center;
     padding: 40px 0;
 }
@@ -20,7 +20,7 @@
 
 
 #homePage .info h3 {
-    font-size: 2.4vw;
+    font-size: 2em;
     padding: 40px 0;
     color: #fff;
     padding-left: 5%;
@@ -38,12 +38,19 @@
     text-align: center;
     border-radius: 50px;  
     margin: 60px 20%;
+    transition: 0.5s;
+}
+
+#homePage .info .gouv:hover {
+    background-color: rgba(34, 214, 109, 0.400);
 }
 
 #homePage .info .gouv a {
     color: #fff;
-    font-size: 2vw;
+    font-size: 2em;
 } 
+
+
 
 .garde {
     display: flex;
@@ -68,4 +75,43 @@
     padding: 20px 30px;
     border-radius: 50px;
     color: #22D66E;
+    border: solid 2px #024766;
+    transition: 0.5s;
+}
+
+.garde .gardeEnfant a:hover {
+    background-color: #fff;
+    border: solid 2px #024766;
+}
+
+
+.gardien {
+    display: flex;
+}
+
+.flex3 {
+    width: 60%;
+}
+
+.flex3 img {
+    width: 50%;
+}
+
+.gardien .garderEnfant {
+    width: 80%;
+    padding: 120px 0 0 15%;
+}
+
+.gardien .garderEnfant a {
+    background-color: #024766;
+    padding: 20px 30px;
+    border-radius: 50px;
+    color: #22D66E;
+    border: solid 2px #024766;
+    transition: 0.5s;
+}
+
+.gardien .garderEnfant a:hover {
+    background-color: #fff;
+    border: solid 2px #024766;
 }

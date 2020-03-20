@@ -13,8 +13,8 @@
 </div>
 
 <div class="gardien">
-    <div class="gardeEnfant"><a href="#">Je garde des enfants</a></div>
-    <img src="./asset/img/creche.svg" alt="Image de crèche">
+    <div class="garderEnfant"><a href="#">Je garde des enfants</a></div>
+    <div class="flex3"><img src="../public/asset/img/creche.png" alt="Image de crèche"></div>
 </div>
 
 </section>
