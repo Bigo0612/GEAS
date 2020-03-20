@@ -12,8 +12,7 @@ class UserController extends Controller
 {
     public function register()
     {
-        $title = '';
-
+        die('test');
         $errors = array();
         $form = new Form($errors, 'post');
         if (isset($_POST['submitted'])) {
@@ -32,10 +31,9 @@ class UserController extends Controller
             }
         }
 
-        $this->render('app.default.register', array(
-            'title' => $title,
+        $this->render('app.default.register', [
             'form' => $form,
             'errors' => $errors
-        ));
+        ]);
     }
 }

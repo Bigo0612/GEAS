@@ -1,8 +1,3 @@
-<h1>
-    <?= $title ?>
-</h1>
-
-
 <form action="#" method="post" style="text-align: center; margin-top: 50px">
     <?php
     echo $form->divStart('research');
