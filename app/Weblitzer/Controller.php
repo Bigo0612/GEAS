@@ -2,8 +2,6 @@
 
 namespace App\Weblitzer;
 
-use App\Weblitzer\Config;
-use App\Weblitzer\View;
 
 /**
  *
@@ -14,13 +12,14 @@ class Controller
 
     private $layout = 'layout';
 
-    protected function render($view,$variable = []){
+    protected function render($viewer,$variable = []){
+        $view = new View();
         ob_start();
         extract($variable);
-        require $this->getViewPath().str_replace('.','/',$view).'.php';
-        $view = new View();
+        require $this->getViewPath().str_replace('.','/',$viewer).'.php';
         $content = ob_get_clean();
         require $this->getViewPath().'layout/'.$this->layout.'.php';
+        die();
     }
 
     private function getViewPath()
@@ -31,14 +30,16 @@ class Controller
 
     protected function Abort403()
     {
+        $view = new View();
         header('HTTP/1.0 403 Forbidden');
-        $this->redirect('index.php?page=403');
+        $this->redirect($view->path('403'));
     }
 
     protected function Abort404()
     {
+        $view = new View();
         header('HTTP/1.0 404 Not Found');
-        $this->redirect('index.php?page=404');
+        $this->redirect($view->path('404'));
     }
 
     /**
@@ -76,9 +77,15 @@ class Controller
         return $post;
     }
 
-    protected function redirect($url)
+    protected function redirect($url,$args = array())
     {
-        header('Location: '.$url);
+        $view = new View();
+        if(!empty($args)) {
+            $realurl = $view->path($url,$args);
+        } else {
+            $realurl = $view->path($url);
+        }
+        header('Location: '.$realurl);
         die();
     }
 
