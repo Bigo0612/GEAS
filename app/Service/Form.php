@@ -27,10 +27,6 @@ class Form
     {
         return '<div class="form-control">'.$html.'</div>';
     }
-    private function arround2($html)
-    {
-        return '<div class="form-control2">'.$html.'</div>';
-    }
 
     /**
      * @param $name string
@@ -54,13 +50,6 @@ class Form
     public function input($type,$name,$class = NULL,$data = null)
     {
         return $this->arround('<input class="'.$class.'" type="'.$type.'" id="'.$name.'" name="'.$name.'" " placeholder="Veuillez renseigner ce champ." value="'
-            .$this->getValue
-            ($name,
-                $data).'">');
-    }
-    public function input2($type,$name,$class = NULL,$data = null)
-    {
-        return $this->arround2('<input class="'.$class.'" type="'.$type.'" id="'.$name.'" name="'.$name.'" " placeholder="Veuillez renseigner ce champ." value="'
             .$this->getValue
             ($name,
                 $data).'">');
@@ -98,11 +87,6 @@ class Form
         }
         return null;
     }
-    public function error2(string $name)
-    {
-        $error = !empty($this->errors[$name]) ? $this->errors[$name] : '';
-        return '<span class="error">'.$error.'</span>';
-    }
 
     /**
      * @param $name
@@ -112,11 +96,6 @@ class Form
     public function label($name,$label,$class=NULL )
     {
         return '<label for="'.$name.'" class="'.$class.'">'.ucfirst($label).'</label>';
-    }
-
-    public function label2(string $name, $img)
-    {
-        return '<label class="photo_label" id="' .$img. '" for="'.$name.'"><img class="img_ajout" src="assets/img/plus.png"/></label>';
     }
 
     /**
@@ -151,11 +130,5 @@ class Form
     {
         return '</div>';
     }
-
-    public function h3(string $titre,string $id_title)
-    {
-        return '<h3 class="title_label" id="'.$id_title.'">Veuillez rentrer '.$titre.'</h3>';
-    }
-
 
 }

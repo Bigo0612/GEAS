@@ -1,5 +1,9 @@
 <form action="#" method="post" style="text-align: center; margin-top: 50px">
     <?php
+
+    use App\Service\Form;
+
+    $form =new Form;
     echo $form->divStart('research');
     echo $form->divStart('wrap');
     echo $form->divStart('frame');
