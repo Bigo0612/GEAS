@@ -1,4 +1,4 @@
-<form action="#" method="post">
+<form action="#" method="post"style="text-align: center; margin-top: 50px">
     <?php
 
     use App\Service\Form;
