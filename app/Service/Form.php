@@ -49,7 +49,7 @@ class Form
      */
     public function input($type,$name,$class = NULL,$data = null)
     {
-        return $this->arround('<input class="'.$class.'" type="'.$type.'" id="'.$name.'" name="'.$name.'" " placeholder="Veuillez renseigner ce champ." value="'
+        return $this->arround('<input class="'.$class.'" type="'.$type.'" id="'.$name.'" name="'.$name.'" " placeholder="" value="'
             .$this->getValue
             ($name,
                 $data).'">');
@@ -62,7 +62,7 @@ class Form
      */
     public function textarea($name, $class = NULL, $data = null)
     {
-        return $this->arround2('<textarea class="'.$class.'" name="'.$name.'">'.$this->getValue($name,$data).'</textarea>');
+        return $this->arround('<textarea class="'.$class.'" name="'.$name.'">'.$this->getValue($name,$data).'</textarea>');
     }
 
     /**
@@ -95,7 +95,7 @@ class Form
      */
     public function label($name,$label,$class=NULL )
     {
-        return '<label for="'.$name.'" class="'.$class.'">'.ucfirst($label).'</label>';
+        return '<br><br><label for="'.$name.'" class="'.$class.'">'.ucfirst($label).'</label>';
     }
 
     /**
