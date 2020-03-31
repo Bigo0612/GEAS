@@ -63,6 +63,11 @@ class UserModel extends Model
             $post['roles'], $token, $_GET['id']]);
     }
 
+    public static function changePassword($password, $token, $id)
+    {
+        $sql = "UPDATE " . self::getTable() . " SET pass=?, token=? WHERE id=?";
+        App::getDatabase()->prepareInsert($sql, [$password, $token, $id]);
+    }
 
 
     /**
@@ -207,6 +212,12 @@ class UserModel extends Model
     public function setToken($token): void
     {
         $this->token = $token;
+    }
+
+    public function checkId($token)
+    {
+        $sql = "SELECT id FROM " .self::getTable() . " WHERE token=?";
+        return App::getDatabase()->prepare($sql, [$token], get_called_class(), true);
     }
 
 
