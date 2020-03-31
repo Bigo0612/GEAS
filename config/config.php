@@ -1,7 +1,7 @@
 <?php
 
 return array(
-    'db_name'   => 'mg_parents',
+    'db_name'   => 'GEAS',
     'db_user'   => 'root',
     'db_pass'   => '',
     'db_host'   => 'localhost',
