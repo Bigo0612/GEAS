@@ -23,13 +23,17 @@ class UserController extends Controller
             $errors['nom'] = $v->textValid($post['nom'], 'nom', 2, 50);
             $errors['prenom'] = $v->textValid($post['prenom'], 'prenom', 2, 50);
             $errors['mail'] = $v->emailValid($post['mail']);
+            $errors['adresse1'] = $v->textValid($post['adresse1'], 'adresse1', 2, 500);
             $errors['password1'] = $v->textValid($post['password1'], 'password', 5, 20);
             $errors['password2'] = $v->generateErrorRepeat($post['password1'], $post['password2'], 'Les mots de passe ne correspondent pas.');
+            $errors['ville'] = $v->textValid($post['ville'], 'ville', 2, 500);
+            $errors['cp'] = $v->textValid($post['cp'], 'cp', 4, 9);
+            $errors['telephone'] = $v->textValid($post['telephone'], 'telephone', 9, 10);
             $errors['cgu'] = $v->generateErrorCheckBox($post['cgu'], "Veuillez accepter les Conditions générales d’utilisation.");
 
             if ($v->IsValid($errors) == true) {
                 $hash = password_hash($post['password1'], PASSWORD_DEFAULT);
-                UserModel::insertUser($post['nom'], $post['prenom'], $post['mail'], $hash);
+                UserModel::insertUser($post['nom'], $post['prenom'], $post['mail'], $post['adresse1'], $hash, $post['ville'], $post['cp'], $post['telephone']);
             }
         }
 

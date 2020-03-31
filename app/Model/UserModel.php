@@ -14,8 +14,6 @@ class UserModel extends Model
     private $prenom;
     private $mail;
     private $adresse1;
-    private $adresse2;
-    private $adresse3;
     private $password;
     private $ville;
     private $cp;
@@ -36,11 +34,11 @@ class UserModel extends Model
         return $randomString;
     }
 
-    public static function insertUser(string $nom, string $prenom, string $mail, string $adresse1, string $adresse2, string $adresse3, string $password, string $ville, int $cp, int $telephone): void
+    public static function insertUser(string $nom, string $prenom, string $mail, string $adresse1, string $password, string $ville, int $cp, int $telephone): void
     {
         $token = UserModel::generateToken(255);
-        $sql = "INSERT INTO " . self::getTable() . " VALUES(NULL,?,?,?,?,NULL,NULL,?,?,?,?,?,NOW(),NULL)";
-        App::getDatabase()->prepareInsert($sql, [$nom, $prenom, $mail, $adresse1, $adresse2, $adresse3, $password, $token, $ville, $cp, $telephone]);
+        $sql = "INSERT INTO " . self::getTable() . " VALUES(NULL,?,?,?,?,?,?,?,?,?,NOW(),NULL)";
+        App::getDatabase()->prepareInsert($sql = $nom, $prenom, $mail, $adresse1, $password, $token, $ville, $cp, $telephone);
     }
 
     public static function userLogin(string $email)
