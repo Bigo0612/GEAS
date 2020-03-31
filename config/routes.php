@@ -4,7 +4,8 @@
 $routes = array(
     array('home','default','index'),
     array('register', 'user', 'register'),
-    array('connexion', 'default', 'connexion'),
+    array('connexion', 'user', 'connexion'),
+    array('motDePassOublie', 'user', 'motDePassOublie'),
     array('deconnexion', 'default', 'deconnexion'),
     array('mentionsLegales', 'default', 'mentionsLegales'),
     array('cgu', 'default', 'cgu'),
