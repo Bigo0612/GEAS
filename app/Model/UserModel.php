@@ -38,7 +38,7 @@ class UserModel extends Model
     {
         $token = UserModel::generateToken(255);
         $sql = "INSERT INTO " . self::getTable() . " VALUES(NULL,?,?,?,?,?,?,?,?,?,NOW(),NULL)";
-        App::getDatabase()->prepareInsert($sql = $nom, $prenom, $mail, $adresse1, $password, $token, $ville, $cp, $telephone);
+        App::getDatabase()->prepareInsert($sql, [$nom, $prenom, $mail, $adresse1, $password, $token, $ville, $cp, $telephone]);
     }
 
     public static function userLogin(string $email)
