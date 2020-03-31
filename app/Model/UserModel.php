@@ -41,10 +41,10 @@ class UserModel extends Model
         App::getDatabase()->prepareInsert($sql, [$nom, $prenom, $mail, $adresse1, $password, $token, $ville, $cp, $telephone]);
     }
 
-    public static function userLogin(string $email)
+    public static function userLogin(string $mail)
     {
         $sql = "SELECT * FROM " . self::getTable() . " WHERE email= ?";
-        return App::getDatabase()->prepare($sql, [$email], get_called_class(),true);
+        return App::getDatabase()->prepare($sql, [$mail], get_called_class(),true);
     }
    
     public static function findAllUsers()

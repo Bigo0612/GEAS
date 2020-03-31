@@ -57,13 +57,13 @@ class UserController extends Controller
 
             if ($valid->IsValid($errors) == true) {
                 $user = UserModel::userLogin($post['mail']);
-                if ($user->email === $post['mail'] && password_verify($post['password'], $user->pass)) {
+                if ($user->email === $post['mail'] && password_verify($post['password'], $user->password)) {
                     $_SESSION = array(
                         'id'    => $user->id,
                         'nom'   => $user->nom,
                         'prenom'=> $user->prenom
                     );
-                    //header('Location: index.php?page=home');
+                    header('Location: index.php?page=home');
                 } else {
                     $errors['password'] = 'Mot de passe ou mail incorrect';
                 }
