@@ -35,6 +35,8 @@ class UserController extends Controller
                 $hash = password_hash($post['password1'], PASSWORD_DEFAULT);
                 UserModel::insertUser($post['nom'], $post['prenom'], $post['mail'], $post['adresse1'], $hash, $post['ville'], $post['cp'], $post['telephone']);
             }
+            header('Location: http://localhost/GEAS/public/connexion');
+            exit;
         }
 
         $this->render('app.default.register', array(
@@ -59,12 +61,9 @@ class UserController extends Controller
                     $_SESSION = array(
                         'id'    => $user->id,
                         'nom'   => $user->nom,
-                        'prenom'=> $user->prenom,
-                        'role'  => $user->role,
-                        'email' => $user->email,
-                        'ip'    => $_SERVER['REMOTE_ADDR']
+                        'prenom'=> $user->prenom
                     );
-                    header('Location: index.php?page=home');
+                    //header('Location: index.php?page=home');
                 } else {
                     $errors['password'] = 'Mot de passe ou mail incorrect';
                 }
