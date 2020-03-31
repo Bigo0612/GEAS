@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Weblitzer\Controller;
 
 
+
 /**
  *
  */
@@ -13,10 +14,8 @@ class DefaultController extends Controller
 
     public function index()
     {
-        $message = '';
-
         $this->render('app.default.frontpage',array(
-            'message' => $message,
+
         ));
     }
 
