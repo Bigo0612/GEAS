@@ -8,30 +8,22 @@ use App\App;
 
 class UserModel extends Model
 {
-    protected static $table = 'users';
+    protected static $table = 'geas_client';
     private $id;
-    private $name;
-    private $firstname;
+    private $nom;
+    private $prenom;
     private $mail;
+    private $adresse1;
+    private $adresse2;
+    private $adresse3;
     private $password;
+    private $ville;
+    private $cp;
+    private $telephone;
     private $created_at;
     private $modified_at;
-    private $roles;
     private $token;
 
-
-    public static function insertUser(string $name, string $firstname, string $mail, string $password): void
-    {
-        $token = UserModel::generateToken(255);
-        $sql = "INSERT INTO " . self::getTable() . " VALUES(NULL,?,?,?,?,NOW(),NULL,1,?)";
-        App::getDatabase()->prepareInsert($sql, [$name, $firstname, $mail, $password, $token]);
-    }
-
-    public static function userLogin(string $email)
-    {
-        $sql = "SELECT * FROM " . self::getTable() . " WHERE email= ?";
-        return App::getDatabase()->prepare($sql, [$email], get_called_class(),true);
-    }
 
     public static function generateToken($length)
     {
@@ -44,7 +36,19 @@ class UserModel extends Model
         return $randomString;
     }
 
+    public static function insertUser(string $nom, string $prenom, string $mail, string $adresse1, string $adresse2, string $adresse3, string $password, string $ville, int $cp, int $telephone): void
+    {
+        $token = UserModel::generateToken(255);
+        $sql = "INSERT INTO " . self::getTable() . " VALUES(NULL,?,?,?,?,NULL,NULL,?,?,?,?,?,NOW(),NULL)";
+        App::getDatabase()->prepareInsert($sql, [$nom, $prenom, $mail, $adresse1, $adresse2, $adresse3, $password, $token, $ville, $cp, $telephone]);
+    }
 
+    public static function userLogin(string $email)
+    {
+        $sql = "SELECT * FROM " . self::getTable() . " WHERE email= ?";
+        return App::getDatabase()->prepare($sql, [$email], get_called_class(),true);
+    }
+   
     public static function findAllUsers()
     {
         return App::getDatabase()->query("SELECT * FROM " . self::getTable() . " ", get_called_class());
