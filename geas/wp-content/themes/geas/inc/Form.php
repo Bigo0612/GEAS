@@ -52,7 +52,7 @@ class Form
      */
     public function input($type,$name,$class = NULL,$data = null)
     {
-        return $this->arround('<input class="'.$class.'" type="'.$type.'" id="'.$name.'" name="'.$name.'" " placeholder="Veuillez renseigner ce champ." value="'
+        return $this->arround('<input class="'.$class.'" type="'.$type.'" id="'.$name.'" name="'.$name.'"  placeholder="Veuillez renseigner ce champ." value="'
             .$this->getValue
             ($name,
                 $data).'">');
@@ -92,8 +92,8 @@ class Form
      */
     public function error($name)
     {
-        if(!empty($this->error[$name])) {
-            return '<span class="error">'.$this->error[$name].'</span>';
+        if(!empty($this->errors[$name])) {
+            return '<span class="error">'.$this->errors[$name].'</span>';
         }
         return null;
     }

@@ -145,6 +145,13 @@ input.envoiepro:hover{
 	opacity: 0.6;
 
 }
+span{
+	color: red;
+	display: block;
+	font-size: 1em;
+	margin-bottom: 5px;
+	text-align: center;
+}
 
 /*
 ///////  footer  ///////
