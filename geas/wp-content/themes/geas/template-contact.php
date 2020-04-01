@@ -22,7 +22,7 @@ if(!empty($_POST['submitted']))
     if($val->IsValid($errors)) {
 
         $wpdb->insert(
-            'won_contact',
+            'geas_contact',
             array(
                 'ID' => NULL,
                 'sujet' => $sujet,

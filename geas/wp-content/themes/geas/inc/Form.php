@@ -52,7 +52,7 @@ class Form
      */
     public function input($type,$name,$class = NULL,$data = null)
     {
-        return $this->arround('<input class="'.$class.'" type="'.$type.'" id="'.$name.'" name="'.$name.'" " placeholder="Veuillez renseigner ce champ." value="'
+        return $this->arround('<input class="'.$class.'" type="'.$type.'" id="'.$name.'" name="'.$name.'"  placeholder="Veuillez renseigner ce champ." value="'
             .$this->getValue
             ($name,
                 $data).'">');
@@ -92,8 +92,8 @@ class Form
      */
     public function error($name)
     {
-        if(!empty($this->error[$name])) {
-            return '<span class="error">'.$this->error[$name].'</span>';
+        if(!empty($this->errors[$name])) {
+            return '<span class="error">'.$this->errors[$name].'</span>';
         }
         return null;
     }
@@ -130,6 +130,16 @@ class Form
         $html = '<select name="'.$name.'" class="'.$class.'">';
         foreach ($entitys as $entity) {
             $html .= '<option value="'.$entity->$idd.'">'.$entity->$column.'</option>';
+        }
+        $html .= '</select>';
+        return $html;
+    }
+
+    public function select2($name, $array, $column, $idd = 'id', $class = NULL)
+    {
+        $html = '<select name="'.$name.'" class="'.$class.'">';
+        for ($i=0; $i < count($array); $i++){
+            $html .= '<option value="'.$array[$i][$column].'">'.$array[$i][$column].'</option>';
         }
         $html .= '</select>';
         return $html;
