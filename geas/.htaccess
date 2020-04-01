@@ -5,11 +5,11 @@
 # Toute modification des directives entre ces marqueurs sera outrepassée.
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteBase /LastProjet/GEAS/geas/
+RewriteBase /LastProjet/geas/
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /LastProjet/GEAS/geas/index.php [L]
+RewriteRule . /LastProjet/geas/index.php [L]
 </IfModule>
 
 # END WordPress
