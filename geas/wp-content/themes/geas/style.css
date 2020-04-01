@@ -105,7 +105,7 @@ header nav ul li a {
 .cadrement{
 	max-width: 500px;
 	width: 100%;
-	margin: 0 auto;
+	margin: 0px auto;
 	border: solid 2px;
 	border-radius: 25px;
 	height: auto;
@@ -145,7 +145,7 @@ input.envoiepro:hover{
 	opacity: 0.6;
 
 }
-span{
+span.error{
 	color: red;
 	display: block;
 	font-size: 1em;
