@@ -54,6 +54,7 @@ class UserController extends Controller
             $post = $this->cleanXss($_POST);
             $valid = new Validation();
             $errors['mail'] = $valid->emailValid($post['mail']);
+            var_dump($errors);
 
             if ($valid->IsValid($errors) == true) {
                 $user = UserModel::userLogin($post['mail']);
