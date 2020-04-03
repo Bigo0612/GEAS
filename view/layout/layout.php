@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400&display=swap" rel="stylesheet" />>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MiniGarde</title>
-    <link rel="stylesheet" type="text/css" href="<?= $view->asset('css/style.css'); ?>">
+    <link rel="stylesheet" type="text/css" href="<?= $view->asset('css/style.css'); ?>" />
 </head>
 <body>
 
@@ -25,7 +25,7 @@
                 </li>
             <?php } else { ?>
                 <li class="connexion">
-                    <a href="<?= $view->path('recherche') ?>">Rechercher</a>
+                    <a href="<?= $view->path('rechercher') ?>">Rechercher</a>
                 </li>
                 <li class="connexion">
                     <a href="<?= $view->path('deconnexion') ?>">Déconnexion</a>
