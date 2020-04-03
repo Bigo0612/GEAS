@@ -80,6 +80,7 @@ if (!empty($_POST['submitted'])) {
                     '%s',
             )
         );
+
     }
 
 ?>
@@ -88,7 +89,7 @@ if (!empty($_POST['submitted'])) {
 <p>nom: <?= $client->nom; ?></p>
 <p>prenom: <?= $client->prenom; ?></p>
 <p>email: <?= $client->email; ?></p>
-<p>adresse: <?= $client->adresse; ?></p>
+<p>adresse: <?= $client->adresse1; ?></p>
 <p>ville: <?= $client->ville; ?></p>
 <p>cp: <?= $client->cp; ?></p>
 <p>telephone: <?= $client->telephone; ?></p>
