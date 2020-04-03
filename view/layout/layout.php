@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <script src="https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.js"></script>
     <link href="https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400&display=swap" rel="stylesheet" />>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400&display=swap" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MiniGarde</title>
     <link rel="stylesheet" type="text/css" href="<?= $view->asset('css/style.css'); ?>" />
@@ -57,7 +58,6 @@
         <a href="<?= $view->path('contact'); ?>">Contact</a>
     </div>
 </footer>
-
 <script src="<?= $view->asset('js/main.js'); ?>"></script>
 <script src="https://kit.fontawesome.com/5d1ae1daad.js" crossorigin="anonymous"></script>
 

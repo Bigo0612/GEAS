@@ -1,0 +1,10 @@
+.localisation {
+    text-transform: uppercase;
+    font-size: 2em;
+    background-color: lime;
+    display: inline-block;
+}
+
+.localisation:focus {
+    cursor: pointer;
+}
