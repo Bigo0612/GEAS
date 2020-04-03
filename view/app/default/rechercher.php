@@ -57,7 +57,22 @@ trackUserLocation: true
                     zoom: 3 // starting zoom
                 });
                 new mapboxgl.Marker().setLngLat(feature.center).addTo(map);
+                map.addControl(
+                    new mapboxgl.GeolocateControl({
+                        positionOptions: {
+                            enableHighAccuracy: true
+                        },
+                        trackUserLocation: true
+                    })
+                );
+                map.addControl(
+                    new MapboxGeocoder({
+                        accessToken: mapboxgl.accessToken,
+                        mapboxgl: mapboxgl
+                    })
+                );
             }
+
         });
 
 </script>
