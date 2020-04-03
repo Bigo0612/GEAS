@@ -3,6 +3,7 @@
 @import "footer.css";
 @import "home.css";
 @import "form.css";
+@import "loc.css";
 
 html body {
     font-family: 'Roboto', sans-serif;
