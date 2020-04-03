@@ -63,7 +63,7 @@ class UserController extends Controller
                         'nom'   => $user->nom,
                         'prenom'=> $user->prenom
                     );
-                    //header('Location: index.php?page=home');
+                    header('Location: http://localhost/GEAS/public/home');
                 } else {
                     $errors['password'] = 'Mot de passe ou mail incorrect';
                 }

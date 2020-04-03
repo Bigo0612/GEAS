@@ -87,33 +87,33 @@ class UserModel extends Model
     /**
      * @return mixed
      */
-    public function getName()
+    public function getNom()
     {
-        return $this->name;
+        return $this->nom;
     }
 
     /**
-     * @param mixed $name
+     * @param mixed $nom
      */
-    public function setName($name): void
+    public function setNom($nom): void
     {
-        $this->name = $name;
+        $this->name = $nom;
     }
 
     /**
      * @return mixed
      */
-    public function getFirstname()
+    public function getPrenom()
     {
-        return $this->firstname;
+        return $this->prenom;
     }
 
     /**
-     * @param mixed $firstname
+     * @param mixed $prenom
      */
-    public function setFirstname($firstname): void
+    public function setPrenom($prenom): void
     {
-        $this->firstname = $firstname;
+        $this->firstname = $prenom;
     }
 
     /**
