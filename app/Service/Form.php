@@ -49,7 +49,7 @@ class Form
      */
     public function input($type,$name,$class = NULL,$data = null)
     {
-        return $this->arround('<input class="'.$class.'" type="'.$type.'" id="'.$name.'" name="'.$name.'" " placeholder="" value="'
+        return $this->arround('<input class="'.$class.'" type="'.$type.'" id="'.$name.'" name="'.$name.'" placeholder="" value="'
             .$this->getValue
             ($name,
                 $data).'">');

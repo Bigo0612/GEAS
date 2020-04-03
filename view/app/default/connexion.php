@@ -1,4 +1,4 @@
-<form action="#" method="post"style="text-align: center; margin-top: 50px">
+<form action="#" method="post" style="text-align: center; margin-top: 50px">
     <?php
 
     use App\Service\Form;
@@ -8,8 +8,8 @@
     echo $form->divStart('wrap');
     echo $form->divStart('frame');
     echo $form->divStart('research_executive'); ?>
-    <?php echo $form->divStart('research_question');
-    ?> <p>Connectez vous<p>
+    <?php echo $form->divStart('research_question');?> 
+    <p>Connectez vous<p>
         <?php echo $form->divEnd();
         echo $form->divEnd();
 

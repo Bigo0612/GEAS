@@ -24,7 +24,7 @@ class UserController extends Controller
             $errors['prenom'] = $v->textValid($post['prenom'], 'prenom', 2, 50);
             $errors['mail'] = $v->emailValid($post['mail']);
             $errors['adresse1'] = $v->textValid($post['adresse1'], 'adresse1', 2, 500);
-            $errors['password1'] = $v->textValid($post['password1'], 'password', 5, 20);
+            $errors['password'] = $v->textValid($post['password1'], 'password', 5, 20);
             $errors['password2'] = $v->generateErrorRepeat($post['password1'], $post['password2'], 'Les mots de passe ne correspondent pas.');
             $errors['ville'] = $v->textValid($post['ville'], 'ville', 2, 500);
             $errors['cp'] = $v->textValid($post['cp'], 'cp', 4, 9);
@@ -32,7 +32,7 @@ class UserController extends Controller
             $errors['cgu'] = $v->generateErrorCheckBox($post['cgu'], "Veuillez accepter les Conditions générales d’utilisation.");
 
             if ($v->IsValid($errors) == true) {
-                $hash = password_hash($post['password1'], PASSWORD_DEFAULT);
+                $hash = password_hash($post['password'], PASSWORD_DEFAULT);
                 UserModel::insertUser($post['nom'], $post['prenom'], $post['mail'], $post['adresse1'], $hash, $post['ville'], $post['cp'], $post['telephone']);
             }
             header('Location: http://localhost/GEAS/public/connexion');
@@ -54,17 +54,16 @@ class UserController extends Controller
             $post = $this->cleanXss($_POST);
             $valid = new Validation();
             $errors['mail'] = $valid->emailValid($post['mail']);
-            var_dump($errors);
 
-            if ($valid->IsValid($errors) == true) {
+            if ($valid->IsValid($errors) === true) {
                 $user = UserModel::userLogin($post['mail']);
-                if ($user->email === $post['mail'] && password_verify($post['password'], $user->password)) {
+                if ($user->email === $post['mail'] && password_verify($post['password'], $user->mot_de_passe)) {
                     $_SESSION = array(
                         'id'    => $user->id,
                         'nom'   => $user->nom,
                         'prenom'=> $user->prenom
                     );
-                    header('Location: index.php?page=home');
+                    //header('Location: index.php?page=home');
                 } else {
                     $errors['password'] = 'Mot de passe ou mail incorrect';
                 }
