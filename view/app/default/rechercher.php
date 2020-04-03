@@ -1,18 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8" />
-<title>Locate the user</title>
-<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
-<script src="https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.js"></script>
-<link href="https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.css" rel="stylesheet" />
-<style>
-	body { margin: 0; padding: 0; }
-	#map { position: absolute; top: 0; bottom: 0; width: 100%; }
-</style>
-</head>
-<body>
+<style> body { margin: 0; padding: 0; } #map { position: absolute; top: 0; bottom: 0; width: 100%; }</style>
+
 <div id="map"></div>
+
 <script>
 	mapboxgl.accessToken = 'pk.eyJ1Ijoibmlmb28iLCJhIjoiY2s4anhkN3hvMDA3bzNrczRxdzNmZmM2cCJ9.6GaMDEKksRW04i6rIhot9g';
 var map = new mapboxgl.Map({
@@ -33,5 +22,3 @@ trackUserLocation: true
 );
 </script>
  
-</body>
-</html>
