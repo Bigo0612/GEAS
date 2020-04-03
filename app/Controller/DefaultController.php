@@ -73,6 +73,15 @@ class DefaultController extends Controller
         ));
     }
 
+    public function rechercher()
+    {
+        $message = '';
+
+        $this->render('app.default.rechercher',array(
+            'message'   => $message,
+        ));
+    }
+
     /**
      *
      */

@@ -9,7 +9,8 @@ $routes = array(
     array('deconnexion', 'default', 'deconnexion'),
     array('mentionsLegales', 'default', 'mentionsLegales'),
     array('cgu', 'default', 'cgu'),
-    array('contact', 'default', 'contact')
+    array('contact', 'default', 'contact'),
+    array('rechercher', 'default', 'rechercher')
 );
 
 
