@@ -21,11 +21,11 @@ function success(position) {
 }
 
 function error() {
-  status.textContent = 'Unable to retrieve your location';
+  status.textContent = 'Impossible de recevoir votre géolocalisation';
 }
 
 if (!navigator.geolocation) {
-  status.textContent = 'Geolocation is not supported by your browser';
+  status.textContent = 'La geolocalisation n\'est pas supporter sur votre naviguateur';
 } else {
   status.textContent = 'Locating…';
   navigator.geolocation.getCurrentPosition(success, error);
