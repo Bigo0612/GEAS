@@ -1,18 +1,19 @@
 <?php
+
 namespace App\Service;
 
-class Geolocalisation {
+class Geolocalisation
+{
 
     private $latitude;
     private $longitude;
 
-    public function location($latitude)
+    public function location()
     {
-        if ($latitude) {
-            # code...
+        if ($_GET['latitude'] = true && $_GET['longitude'] = true) {
+            echo $_GET['latitude'];
         } else {
-            # code...
+            echo 'Impossible';
         }
     }
-
 }

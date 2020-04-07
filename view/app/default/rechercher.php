@@ -1,4 +1,4 @@
-<button id = "find-me">Montrer ma localisation</button><br/>
+<button id = "find-me">Me geolocaliser</button><br/>
 <p id = "status"></p>
 <a id = "map-link" target="_blank"></a>
 
