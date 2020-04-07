@@ -1,2 +1,2 @@
-<button onclick="geo()" id="find"><a id="findme" href="">Me geolocaliser</a></button>
+<button id="find">Me geolocaliser</button>
 <br /><p id="status"></p>
