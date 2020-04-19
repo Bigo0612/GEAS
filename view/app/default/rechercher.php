@@ -15,9 +15,24 @@ function success(position) {
   const latitude  = position.coords.latitude;
   const longitude = position.coords.longitude;
 
-  status.textContent = '';
-  mapLink.href = `http://localhost/GEAS/public/rechercher/${latitude}/${longitude}`;
-  mapLink.textContent = `Latitude: ${latitude} °, Longitude: ${longitude} °`;
+  
+
+
+  var url = new URL('http://localhost/GEAS/public/rechercher');
+var search_params = url.searchParams;
+
+// add "longitude" parameter
+search_params.set(`longitude`,  `${longitude}` );
+search_params.set(`latitude`,  `${latitude}` );
+
+url.search = search_params.toString();
+
+var new_url = url.toString();
+
+status.textContent = '';
+  mapLink.href = new_url;
+  mapLink.textContent = 'Trouver les crèches';
+
 }
 
 function error() {
