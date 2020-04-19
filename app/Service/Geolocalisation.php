@@ -10,10 +10,10 @@ class Geolocalisation
 
     public function location()
     {
-        if ($_GET['latitude'] = true && $_GET['longitude'] = true) {
+        if (!empty ($_GET['longitude'])){
+            echo $_GET['longitude'];
+        } if( !empty( $_GET['latitude'])){
             echo $_GET['latitude'];
-        } else {
-            echo 'Impossible';
         }
     }
 }
