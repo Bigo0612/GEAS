@@ -50,3 +50,9 @@
 
     document.querySelector('#find-me').addEventListener('click', geoFindMe);
 </script>
+
+<?php
+use App\Service\Geolocalisation;
+$geoloc = new Geolocalisation;
+echo $geoloc->location();
+?>
