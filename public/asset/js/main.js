@@ -4,28 +4,38 @@ function geoFindMe() {
   const mapLink = document.querySelector('#map-link');
 
   mapLink.href = '';
-  mapLink.textContent = '';
 
   function success(position) {
-    const latitude  = position.coords.latitude;
-    const longitude = position.coords.longitude;
+      const latitude = position.coords.latitude;
+      const longitude = position.coords.longitude;
 
-    status.textContent = '';
-    mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
-    mapLink.textContent = `Latitude: ${latitude} °, Longitude: ${longitude} °`;
+      var url = new URL('http://localhost/GEAS/public/rechercher');
+      var search_params = url.searchParams;
+
+      // add "longitude" parameter
+      search_params.set(`longitude`, `${longitude}`);
+      search_params.set(`latitude`, `${latitude}`);
+
+      url.search = search_params.toString();
+
+      var new_url = url.toString();
+
+      status.textContent = '';
+      mapLink.href = new_url;
+
   }
 
   function error() {
-    status.textContent = 'Unable to retrieve your location';
+      status.textContent = 'Unable to retrieve your location';
   }
 
   if (!navigator.geolocation) {
-    status.textContent = 'Geolocation is not supported by your browser';
+      status.textContent = 'Geolocation is not supported by your browser';
   } else {
-    status.textContent = 'Locating…';
-    navigator.geolocation.getCurrentPosition(success, error);
+      status.textContent = 'Locating…';
+      navigator.geolocation.getCurrentPosition(success, error);
   }
 
 }
 
-document.querySelector('#find-me').addEventListener('click', geoFindMe);
+document.querySelector('#map-link').addEventListener('mouseover', geoFindMe);

@@ -11,7 +11,7 @@ class Geolocalisation
     public function location()
     {
         if (!empty ($_GET['longitude'])){
-            echo $_GET['longitude'];
+            echo $_GET['longitude'] . ' et ';
         } if( !empty( $_GET['latitude'])){
             echo $_GET['latitude'];
         }
