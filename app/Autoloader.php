@@ -24,6 +24,7 @@ class Autoloader{
             //require 'class/' . $class . '.php';
             require $class . '.php';
         }
+        
     }
 
 }
